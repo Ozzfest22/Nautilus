@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GymNautilusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="IdCategoria" />
+    </Key>
+    <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__IdCat__619B8048" FromRole="Categoria" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Clases">
+    <Key>
+      <PropertyRef Name="IdClases" />
+    </Key>
+    <Property Name="IdClases" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreClase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK__Horarios__IdClas__5BE2A6F2" FromRole="Clases" ToRole="Horarios" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dni" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Edad" Type="Int32" />
+    <Property Name="IdSexo" Type="Int32" />
+    <Property Name="IdDistrito" Type="Int32" />
+    <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Distritos" Relationship="Self.FK__Cliente__IdDistr__4E88ABD4" FromRole="Cliente" ToRole="Distritos" />
+    <NavigationProperty Name="Sexo" Relationship="Self.FK__Cliente__IdSexo__4D94879B" FromRole="Cliente" ToRole="Sexo" />
+    <NavigationProperty Name="Pedidos" Relationship="Self.FK__Pedidos__IdClien__6754599E" FromRole="Cliente" ToRole="Pedidos" />
+  </EntityType>
+  <EntityType Name="DetallePedido">
+    <Key>
+      <PropertyRef Name="IdPedidos" />
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="MontoTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="IdPedidos" Type="Int32" Nullable="false" />
+    <Property Name="IdProducto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pedidos" Relationship="Self.FK__DetallePe__IdPed__6B24EA82" FromRole="DetallePedido" ToRole="Pedidos" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK__DetallePe__IdPro__6C190EBB" FromRole="DetallePedido" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Distritos">
+    <Key>
+      <PropertyRef Name="IdDistrito" />
+    </Key>
+    <Property Name="IdDistrito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DistritoDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdDistr__4E88ABD4" FromRole="Distritos" ToRole="Cliente" />
+    <NavigationProperty Name="Trabajador" Relationship="Self.FK__Trabajado__IdDis__5441852A" FromRole="Distritos" ToRole="Trabajador" />
+  </EntityType>
+  <EntityType Name="Horarios">
+    <Key>
+      <PropertyRef Name="IdHorario" />
+    </Key>
+    <Property Name="IdHorario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Instructor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdClases" Type="Int32" />
+    <Property Name="IdTrabajador" Type="Int32" />
+    <NavigationProperty Name="Clases" Relationship="Self.FK__Horarios__IdClas__5BE2A6F2" FromRole="Horarios" ToRole="Clases" />
+    <NavigationProperty Name="Trabajador" Relationship="Self.FK__Horarios__IdTrab__5CD6CB2B" FromRole="Horarios" ToRole="Trabajador" />
+  </EntityType>
+  <EntityType Name="Pedidos">
+    <Key>
+      <PropertyRef Name="IdPedidos" />
+    </Key>
+    <Property Name="IdPedidos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MetodoPago" Type="Byte" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="Int32" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="IdTrabajador" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Pedidos__IdClien__6754599E" FromRole="Pedidos" ToRole="Cliente" />
+    <NavigationProperty Name="DetallePedido" Relationship="Self.FK__DetallePe__IdPed__6B24EA82" FromRole="Pedidos" ToRole="DetallePedido" />
+    <NavigationProperty Name="Trabajador" Relationship="Self.FK__Pedidos__IdTraba__68487DD7" FromRole="Pedidos" ToRole="Trabajador" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdCategoria" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <Property Name="ImagenProducto" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="CantidadProducto" Type="Int32" />
+    <Property Name="Estado" Type="Int32" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK__Productos__IdCat__619B8048" FromRole="Productos" ToRole="Categoria" />
+    <NavigationProperty Name="DetallePedido" Relationship="Self.FK__DetallePe__IdPro__6C190EBB" FromRole="Productos" ToRole="DetallePedido" />
+  </EntityType>
+  <EntityType Name="Sexo">
+    <Key>
+      <PropertyRef Name="IdSexo" />
+    </Key>
+    <Property Name="IdSexo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SexoDescripcion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdSexo__4D94879B" FromRole="Sexo" ToRole="Cliente" />
+    <NavigationProperty Name="Trabajador" Relationship="Self.FK__Trabajado__IdSex__534D60F1" FromRole="Sexo" ToRole="Trabajador" />
+  </EntityType>
+  <EntityType Name="T_TABLAS">
+    <Key>
+      <PropertyRef Name="T_IDCAMPO" />
+    </Key>
+    <Property Name="T_IDCAMPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T_IDTIPOTABLA" Type="Int32" />
+    <Property Name="T_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_VER" Type="Int32" />
+    <Property Name="T_VALOR" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_TIPOTABLA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TP_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TP_DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trabajador">
+    <Key>
+      <PropertyRef Name="IdTrabajador" />
+    </Key>
+    <Property Name="IdTrabajador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dni" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Edad" Type="Int32" />
+    <Property Name="IdSexo" Type="Int32" />
+    <Property Name="IdDistrito" Type="Int32" />
+    <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Distritos" Relationship="Self.FK__Trabajado__IdDis__5441852A" FromRole="Trabajador" ToRole="Distritos" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK__Horarios__IdTrab__5CD6CB2B" FromRole="Trabajador" ToRole="Horarios" />
+    <NavigationProperty Name="Pedidos" Relationship="Self.FK__Pedidos__IdTraba__68487DD7" FromRole="Trabajador" ToRole="Pedidos" />
+    <NavigationProperty Name="Sexo" Relationship="Self.FK__Trabajado__IdSex__534D60F1" FromRole="Trabajador" ToRole="Sexo" />
+  </EntityType>
+  <Association Name="FK__Productos__IdCat__619B8048">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Horarios__IdClas__5BE2A6F2">
+    <End Role="Clases" Type="Self.Clases" Multiplicity="0..1" />
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clases">
+        <PropertyRef Name="IdClases" />
+      </Principal>
+      <Dependent Role="Horarios">
+        <PropertyRef Name="IdClases" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__IdDistr__4E88ABD4">
+    <End Role="Distritos" Type="Self.Distritos" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distritos">
+        <PropertyRef Name="IdDistrito" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdDistrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__IdSexo__4D94879B">
+    <End Role="Sexo" Type="Self.Sexo" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sexo">
+        <PropertyRef Name="IdSexo" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pedidos__IdClien__6754599E">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Pedidos">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetallePe__IdPed__6B24EA82">
+    <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="1" />
+    <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedidos">
+        <PropertyRef Name="IdPedidos" />
+      </Principal>
+      <Dependent Role="DetallePedido">
+        <PropertyRef Name="IdPedidos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetallePe__IdPro__6C190EBB">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+    <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="DetallePedido">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Trabajado__IdDis__5441852A">
+    <End Role="Distritos" Type="Self.Distritos" Multiplicity="0..1" />
+    <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distritos">
+        <PropertyRef Name="IdDistrito" />
+      </Principal>
+      <Dependent Role="Trabajador">
+        <PropertyRef Name="IdDistrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Horarios__IdTrab__5CD6CB2B">
+    <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="0..1" />
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trabajador">
+        <PropertyRef Name="IdTrabajador" />
+      </Principal>
+      <Dependent Role="Horarios">
+        <PropertyRef Name="IdTrabajador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pedidos__IdTraba__68487DD7">
+    <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="0..1" />
+    <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trabajador">
+        <PropertyRef Name="IdTrabajador" />
+      </Principal>
+      <Dependent Role="Pedidos">
+        <PropertyRef Name="IdTrabajador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Trabajado__IdSex__534D60F1">
+    <End Role="Sexo" Type="Self.Sexo" Multiplicity="0..1" />
+    <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sexo">
+        <PropertyRef Name="IdSexo" />
+      </Principal>
+      <Dependent Role="Trabajador">
+        <PropertyRef Name="IdSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GymNautilusEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Clases" EntityType="Self.Clases" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" />
+    <EntitySet Name="Distritos" EntityType="Self.Distritos" />
+    <EntitySet Name="Horarios" EntityType="Self.Horarios" />
+    <EntitySet Name="Pedidos" EntityType="Self.Pedidos" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" />
+    <EntitySet Name="Sexo" EntityType="Self.Sexo" />
+    <EntitySet Name="T_TABLAS" EntityType="Self.T_TABLAS" />
+    <EntitySet Name="T_TIPOTABLA" EntityType="Self.T_TIPOTABLA" />
+    <EntitySet Name="Trabajador" EntityType="Self.Trabajador" />
+    <AssociationSet Name="FK__Productos__IdCat__619B8048" Association="Self.FK__Productos__IdCat__619B8048">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Horarios__IdClas__5BE2A6F2" Association="Self.FK__Horarios__IdClas__5BE2A6F2">
+      <End Role="Clases" EntitySet="Clases" />
+      <End Role="Horarios" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__IdDistr__4E88ABD4" Association="Self.FK__Cliente__IdDistr__4E88ABD4">
+      <End Role="Distritos" EntitySet="Distritos" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__IdSexo__4D94879B" Association="Self.FK__Cliente__IdSexo__4D94879B">
+      <End Role="Sexo" EntitySet="Sexo" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pedidos__IdClien__6754599E" Association="Self.FK__Pedidos__IdClien__6754599E">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Pedidos" EntitySet="Pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetallePe__IdPed__6B24EA82" Association="Self.FK__DetallePe__IdPed__6B24EA82">
+      <End Role="Pedidos" EntitySet="Pedidos" />
+      <End Role="DetallePedido" EntitySet="DetallePedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetallePe__IdPro__6C190EBB" Association="Self.FK__DetallePe__IdPro__6C190EBB">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="DetallePedido" EntitySet="DetallePedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Trabajado__IdDis__5441852A" Association="Self.FK__Trabajado__IdDis__5441852A">
+      <End Role="Distritos" EntitySet="Distritos" />
+      <End Role="Trabajador" EntitySet="Trabajador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Horarios__IdTrab__5CD6CB2B" Association="Self.FK__Horarios__IdTrab__5CD6CB2B">
+      <End Role="Trabajador" EntitySet="Trabajador" />
+      <End Role="Horarios" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pedidos__IdTraba__68487DD7" Association="Self.FK__Pedidos__IdTraba__68487DD7">
+      <End Role="Trabajador" EntitySet="Trabajador" />
+      <End Role="Pedidos" EntitySet="Pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Trabajado__IdSex__534D60F1" Association="Self.FK__Trabajado__IdSex__534D60F1">
+      <End Role="Sexo" EntitySet="Sexo" />
+      <End Role="Trabajador" EntitySet="Trabajador" />
+    </AssociationSet>
+    <FunctionImport Name="prueba" />
+    <FunctionImport Name="Sp_ActualizarCliente">
+      <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ActualizarEstadoTrabajador">
+      <Parameter Name="IdTrabajador" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_IngresoCliente" ReturnType="Collection(GymNautilusModel.Sp_IngresoCliente_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_IngresoTrabajador" ReturnType="Collection(GymNautilusModel.Sp_IngresoTrabajador_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_InsertarClase">
+      <Parameter Name="NombreClase" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_InsertarCliente">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellidos" Mode="In" Type="String" />
+      <Parameter Name="Dni" Mode="In" Type="String" />
+      <Parameter Name="Edad" Mode="In" Type="Int32" />
+      <Parameter Name="IdSexo" Mode="In" Type="Int32" />
+      <Parameter Name="IdDistrito" Mode="In" Type="Int32" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_InsertarTrabajador">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellidos" Mode="In" Type="String" />
+      <Parameter Name="Dni" Mode="In" Type="String" />
+      <Parameter Name="Edad" Mode="In" Type="Int32" />
+      <Parameter Name="IdSexo" Mode="In" Type="Int32" />
+      <Parameter Name="IdDistrito" Mode="In" Type="Int32" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Listar_Combos" ReturnType="Collection(GymNautilusModel.SP_Listar_Combos_Result)">
+      <Parameter Name="OP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ListarCategoria" ReturnType="Collection(GymNautilusModel.Sp_ListarCategoria_Result)" />
+    <FunctionImport Name="Sp_ListarCategoriaProducto" ReturnType="Collection(GymNautilusModel.Sp_ListarCategoriaProducto_Result)">
+      <Parameter Name="Categoria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ListarCliente" ReturnType="Collection(GymNautilusModel.Sp_ListarCliente_Result)" />
+    <FunctionImport Name="Sp_ListarDistrito" ReturnType="Collection(GymNautilusModel.Sp_ListarDistrito_Result)" />
+    <FunctionImport Name="Sp_ListarSexo" ReturnType="Collection(GymNautilusModel.Sp_ListarSexo_Result)" />
+    <FunctionImport Name="Sp_ListarTrabajador" ReturnType="Collection(GymNautilusModel.Sp_ListarTrabajador_Result)" />
+    <FunctionImport Name="Sp_ValidarUsuarioCliente" ReturnType="Collection(String)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ValidarUsuarioTrabajador" ReturnType="Collection(String)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_InsertarProducto">
+      <Parameter Name="NombreProducto" Mode="In" Type="String" />
+      <Parameter Name="Precio" Mode="In" Type="Decimal" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+      <Parameter Name="ImagenProducto" Mode="In" Type="String" />
+      <Parameter Name="CantidadProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Sp_IngresoCliente_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contrasena" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="IdCliente" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Sp_IngresoTrabajador_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contrasena" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="IdTrabajador" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_Listar_Combos_Result">
+    <Property Type="Int32" Name="T_IDCAMPO" Nullable="false" />
+    <Property Type="String" Name="T_NOMBRE" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Sp_ListarCategoria_Result">
+    <Property Type="Int32" Name="IdCategoria" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Sp_ListarCategoriaProducto_Result">
+    <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="ImagenProducto" Nullable="true" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="Sp_ListarCliente_Result">
+    <Property Type="Int32" Name="IdCliente" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Dni" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Sp_ListarDistrito_Result">
+    <Property Type="Int32" Name="IdDistrito" Nullable="false" />
+    <Property Type="String" Name="DistritoDescription" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Sp_ListarSexo_Result">
+    <Property Type="Int32" Name="IdSexo" Nullable="false" />
+    <Property Type="String" Name="SexoDescripcion" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="Sp_ListarTrabajador_Result">
+    <Property Type="Int32" Name="IdTrabajador" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Dni" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

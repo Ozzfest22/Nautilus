@@ -1,0 +1,320 @@
+﻿
+@{
+    ViewBag.Title = "ListarHorariosParaEditar";
+    var ListarLunes = ViewBag.ListarLunes;
+    var ListarMartes = ViewBag.ListarMartes;
+    var ListarMiercoles = ViewBag.ListarMiercoles;
+    var ListarJueves = ViewBag.ListarJueves;
+    var ListarViernes = ViewBag.ListarViernes;
+    var ListarSabado = ViewBag.ListarSabado;
+    var ListarDomingo = ViewBag.ListarDomingo;
+    var NoDisponible = ViewBag.ListarNoDisponibles;
+}
+
+@if (Session["IdTrabajador"] != null)
+{
+
+
+<h2>Horarios</h2>
+
+<div id="exTab2" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab">Lunes</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab">Martes</a>
+        </li>
+        <li>
+            <a href="#3" data-toggle="tab">Miercoles</a>
+        </li>
+        <li>
+            <a href="#4" data-toggle="tab">Jueves</a>
+        </li>
+        <li>
+            <a href="#5" data-toggle="tab">Viernes</a>
+        </li>
+        <li>
+            <a href="#6" data-toggle="tab">Sabado</a>
+        </li>
+        <li>
+            <a href="#7" data-toggle="tab">Domingo</a>
+        </li>
+        <li>
+            <a href="#8" data-toggle="tab">No Disponibles</a>
+        </li>
+    </ul>
+
+    <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var lu in ListarLunes)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible","Horario",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@lu.IdHorario" name="cod" /></td>
+                            <td>@lu.Hora</td>
+                            <td>@lu.Instructor</td>
+                            <td>@lu.NombreClase</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarHorarios", new { id = lu.IdHorario }, new { @class = "btn btn-primary" }) </center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary"/></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="2">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ma in ListarMartes)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible","Horario",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@ma.IdHorario" name="cod" /></td>
+                            <td>@ma.Hora</td>
+                            <td>@ma.Instructor</td>
+                            <td>@ma.NombreClase</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarHorarios", new { id = ma.IdHorario }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary"/></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="3">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var mi in ListarMiercoles)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible","Horario",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@mi.IdHorario" name="cod" /></td>
+                            <td>@mi.Hora</td>
+                            <td>@mi.Instructor</td>
+                            <td>@mi.NombreClase</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarHorarios", new { id = mi.IdHorario }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary" /></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ju in ListarJueves)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible", "Horario", FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@ju.IdHorario" name="cod" /></td>
+                            <td>@ju.Hora</td>
+                            <td>@ju.Instructor</td>
+                            <td>@ju.NombreClase</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarHorarios", new { id = ju.IdHorario }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary" /></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var vi in ListarViernes)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible","Horario",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@vi.IdHorario" name="cod" /></td>
+                            <td>@vi.Hora</td>
+                            <td>@vi.Instructor</td>
+                            <td>@vi.NombreClase</td>
+                            <td>
+                               <center> @Html.ActionLink("Editar", "EditarHorarios", new { id = vi.IdHorario }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary" /></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="6">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sa in ListarSabado)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible","Horario",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@sa.IdHorario" name="cod" /></td>
+                            <td>@sa.Hora</td>
+                            <td>@sa.Instructor</td>
+                            <td>@sa.NombreClase</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarHorarios", new { id = sa.IdHorario }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary" /></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="7">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dom in ListarDomingo)
+                    {
+                        using (Html.BeginForm("ActualizarNoDisponible","Horario",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@dom.IdHorario" name="cod" /></td>
+                            <td>@dom.Hora</td>
+                            <td>@dom.Instructor</td>
+                            <td>@dom.NombreClase</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarHorarios", new { id = dom.IdHorario }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td>
+                                <center><input type="submit" value="Eliminar" class="btn btn-primary" /></center>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                        <td><b>Dia</b></td>
+                        <td><b>Estado</b></td>
+                        <td><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var nodis in NoDisponible)
+                    {
+                        using (Html.BeginForm("ActualizarDisponible", "Horario", FormMethod.Post))
+                        {
+                            <tr>
+                                <td hidden><input type="text" value="@nodis.IdHorario" name="cod" /></td>
+                                <td>@nodis.Hora</td>
+                                <td>@nodis.Instructor</td>
+                                <td>@nodis.NombreClase</td>
+                                <td>@nodis.Dia</td>
+                                <td>@nodis.Estado</td>
+                                <td>
+                                    <center><input type="submit" value="Actualizar" class="btn btn-primary" /></center>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+}
+else
+{
+    Response.Redirect("~/Trabajador/LoginTrabajador");
+}

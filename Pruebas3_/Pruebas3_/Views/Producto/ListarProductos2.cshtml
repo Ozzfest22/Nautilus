@@ -1,0 +1,94 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "ListarProductos2";
+    var ListarProductos = ViewBag.ListarArtic;
+    
+}
+
+<h2>Suplementos</h2>
+<span>@Html.ActionLink("Ver Carrito","AgregaCarrito","Carrito",null,new { @class="btn btn-primary"})</span>
+@*<div class="container">
+
+    <div class="row">
+
+        @foreach (var p in ListarProductos)
+        {
+            using (Html.BeginForm("AgregaCarrito","Carrito",new {Id=p.IdProducto},FormMethod.Post))
+            {
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">@p.NombreProducto</div>
+                    <div class="panel-body">
+
+                        <img class="img-responsive" src="@Url.Content(p.ImagenProducto)" />
+                        <center><p>@p.Precio</p></center>
+                        <center> <p>@p.Descripcion</p></center>
+                        <center><input type="number" class="form-control"/></center>
+                        @*<center><p>@Html.ActionLink("Agregar", "AgregaCarrito", "Carrito", new { Id = p.IdProducto }, null)</p></center>*@
+@*<input type="submit" value="Agregar" />
+                        </div>
+
+                    </div>
+                </div>}
+            }
+        </div>
+    </div>*@
+
+
+<div class="container">
+
+    <div class="row" >
+        @foreach (var p in ListarProductos)
+        {
+           
+                <div class="col-lg-4">
+                    <div class="panel panel-default" style="height:400px">
+                        <div class="panel-heading"><center><b>@p.NombreProducto</b></center></div>
+                        <div class="panel-body">
+                            <div id="id" class="row" hidden>
+                                @p.IdProducto
+                            </div>
+                           <center><img class="img-responsive" src="@Url.Content(p.ImagenProducto)" width="200" height="200" /></center>
+                            <center>@String.Format(new CultureInfo("es-PE"), "{0:C}",p.Precio)</center>
+                            <center>@p.Descripcion</center>
+                            <center>Cantidad:<input type="number" id="cant" min="1" max="5" /></center>
+                            <br />
+                            <center><a href="#" class="agregar btn btn-primary">Agregar</a></center>
+                        </div>
+                        
+                    </div>
+                </div>
+
+        }
+    </div>
+    </div>
+    
+@section Scripts
+{
+    <script>
+    $(function () {
+        $(".agregar").on("click", function (event) {
+            event.preventDefault();
+            //var ProductoId = $("#id").text();
+            //var cantidad = $("#cant").val();
+            var ProductoId = $(this).parent().parent().find("div:eq(0)").text();
+            var cantidad = $(this).parent().parent().find("input").val();
+
+            $.ajax(
+                {
+                    url: "@Url.Action("AgregaCarrito", "Carrito")",
+                    data:  { id: ProductoId, cantidad: cantidad },
+                    type: "post",
+                    success: function (response) {
+                        window.location.href="@Url.Action("AgregaCarrito", "Carrito")";
+                    },
+                    error:function(err,error)
+                    {
+                        alert('Debe agregar al menos un producto');
+                    }
+                }
+                );
+        });
+    });
+    </script>
+}

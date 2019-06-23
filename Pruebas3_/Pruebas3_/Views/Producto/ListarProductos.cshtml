@@ -1,0 +1,90 @@
+﻿@model Pruebas3_.Models.ProductoView
+@using System.Globalization
+@{
+    ViewBag.Title = "ListarProductos";
+    var ListarProductos = ViewBag.ListarProduc;
+}
+
+<h2>Planes</h2>
+
+<div class="container">
+
+    <div class="row">
+      @using (Html.BeginForm("InsertarSus","Producto"))
+      {
+
+        foreach (var p in ListarProductos)
+        {
+            <div class="col-lg-4">
+                <div class="panel panel-default" style="height:400px">
+                    <div class="panel-heading" id="nom"><center><b>@p.NombreProducto</b></center></div>
+                    <div class="panel-body">
+
+                       <center> <img class="img-responsive" src="@Url.Content(p.ImagenProducto)" width="200" height="200" /></center>
+                        <center><p>@String.Format(new CultureInfo("es-PE"),"{0:C}", p.Precio)</p></center>
+                       <center> <p>@p.Descripcion</p></center>
+                        @if (Session["IdCliente"] != null)
+                        {
+                            <center><input type="submit" class="suscribirse btn btn-primary" value="Suscribirse" onclick=Alerta() /></center>
+                        }
+                        else
+                        {
+                            <center><a href="~/Cliente/RegistrarCliente"><input type="button" value="Suscribirse" class="btn btn-primary"></a></center>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        
+        }
+
+      }
+
+    </div>
+
+
+
+
+
+
+</div>
+
+@section Scripts
+{
+    <script>
+    $(function () {
+        $(".suscribirse").on("click", function (event) {
+            event.preventDefault();
+
+            var nombre = $(this).parent().parent().parent().find("div:eq(0)").text();
+
+            $.ajax(
+                {
+                    url: "@Url.Action("InsertarSus", "Producto")",
+                    data:  { nom:nombre },
+                    type: "post",
+                    success: function (response) {
+                        @*window.location.href = "@Url.Action("InsertarSus", "Producto")";*@
+                        window.location.href = response.Url;
+   
+                    },
+                    error:function(err,error)
+                    {
+                        alert('Debe agregar al menos un producto');
+                    }
+                }
+                );
+        });
+    });
+    </script>
+}
+
+<SCRIPT LANGUAGE="JavaScript">
+    function Alerta() {
+    alert ("Su solicitud esta siendo procesada");
+    }
+
+</SCRIPT>
+
+
+

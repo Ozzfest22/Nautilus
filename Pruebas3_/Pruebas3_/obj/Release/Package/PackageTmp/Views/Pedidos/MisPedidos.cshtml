@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "MisPedidos";
+    var MisPedidos = ViewBag.VerMisPedidos;
+}
+
+<h2>Mis Pedidos Realizados</h2>
+
+@if (Session["IdCliente"] != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td><b>Metodo Pago</b></td>
+                <td><b>Fecha de Realizacion</b></td>
+                <td><b>Estado</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mp in MisPedidos)
+            {
+                using (Html.BeginForm("VerDetalle","Pedidos",FormMethod.Post))
+                {
+                    <tr>
+                        <td hidden><input type="text" value="@mp.IdPedidos" name="cod" /></td>
+                        <td>@mp.MetodoPago</td>
+                        <td>@string.Format("{0:yyyy-MM-dd}",mp.FechaRegistro)</td>
+                        <td>@mp.Estado</td>
+                        <td><input type="submit" value="Ver Detalle" class="btn btn-primary"/></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    Response.Redirect("~/Cliente/Login");
+}

@@ -1,0 +1,1425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GymNautilusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Clases">
+          <Key>
+            <PropertyRef Name="IdClases" />
+          </Key>
+          <Property Name="IdClases" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreClase" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+          <Property Name="Dni" Type="varchar" MaxLength="10" />
+          <Property Name="Edad" Type="int" />
+          <Property Name="Sexo" Type="int" />
+          <Property Name="Distrito" Type="int" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="varchar" MaxLength="10" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="FechaRegistro" Type="date" />
+        </EntityType>
+        <EntityType Name="DetallePedido">
+          <Key>
+            <PropertyRef Name="IdPedidos" />
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="MontoTotal" Type="money" />
+          <Property Name="Precio" Type="money" />
+          <Property Name="Cantidad" Type="int" />
+          <Property Name="IdPedidos" Type="int" Nullable="false" />
+          <Property Name="IdProducto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Horarios">
+          <Key>
+            <PropertyRef Name="IdHorario" />
+          </Key>
+          <Property Name="IdHorario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Instructor" Type="varchar" MaxLength="50" />
+          <Property Name="Hora" Type="varchar" MaxLength="30" />
+          <Property Name="Dia" Type="varchar" MaxLength="20" />
+          <Property Name="IdClases" Type="int" />
+          <Property Name="IdTrabajador" Type="int" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="Pedidos">
+          <Key>
+            <PropertyRef Name="IdPedidos" />
+          </Key>
+          <Property Name="IdPedidos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MetodoPago" Type="int" />
+          <Property Name="FechaRegistro" Type="date" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="IdCliente" Type="int" />
+          <Property Name="IdTrabajador" Type="int" />
+        </EntityType>
+        <EntityType Name="Planes">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="30" />
+          <Property Name="Email" Type="varchar" MaxLength="40" />
+          <Property Name="Telefono" Type="varchar" MaxLength="10" />
+          <Property Name="Planes" Type="varchar" MaxLength="30" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="Cod_Trabajador" Type="int" />
+          <Property Name="FechaSuscripcion" Type="date" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreProducto" Type="varchar" MaxLength="50" />
+          <Property Name="Precio" Type="money" />
+          <Property Name="Descripcion" Type="text" />
+          <Property Name="IdCategoria" Type="int" />
+          <Property Name="FechaRegistro" Type="date" />
+          <Property Name="ImagenProducto" Type="varchar" MaxLength="60" />
+          <Property Name="CantidadProducto" Type="int" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="T_TABLAS">
+          <Key>
+            <PropertyRef Name="T_IDCAMPO" />
+          </Key>
+          <Property Name="T_IDCAMPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="T_IDTIPOTABLA" Type="int" />
+          <Property Name="T_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="T_VER" Type="int" />
+          <Property Name="T_VALOR" Type="int" />
+        </EntityType>
+        <EntityType Name="T_TIPOTABLA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TP_NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TP_DESCRIPCION" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trabajador">
+          <Key>
+            <PropertyRef Name="IdTrabajador" />
+          </Key>
+          <Property Name="IdTrabajador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+          <Property Name="Dni" Type="varchar" MaxLength="10" />
+          <Property Name="Edad" Type="int" />
+          <Property Name="Sexo" Type="int" />
+          <Property Name="Distrito" Type="int" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="varchar" MaxLength="10" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="FechaRegistro" Type="date" />
+        </EntityType>
+        <Association Name="FK__DetallePe__IdPed__2C3393D0">
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="1" />
+          <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedidos">
+              <PropertyRef Name="IdPedidos" />
+            </Principal>
+            <Dependent Role="DetallePedido">
+              <PropertyRef Name="IdPedidos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetallePe__IdPro__2D27B809">
+          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+          <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IdProducto" />
+            </Principal>
+            <Dependent Role="DetallePedido">
+              <PropertyRef Name="IdProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Horarios__IdClas__1B0907CE">
+          <End Role="Clases" Type="Self.Clases" Multiplicity="0..1" />
+          <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clases">
+              <PropertyRef Name="IdClases" />
+            </Principal>
+            <Dependent Role="Horarios">
+              <PropertyRef Name="IdClases" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Horarios__IdTrab__1BFD2C07">
+          <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="0..1" />
+          <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trabajador">
+              <PropertyRef Name="IdTrabajador" />
+            </Principal>
+            <Dependent Role="Horarios">
+              <PropertyRef Name="IdTrabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pedidos__IdClien__286302EC">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pedidos__IdTraba__29572725">
+          <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="0..1" />
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trabajador">
+              <PropertyRef Name="IdTrabajador" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="IdTrabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__IdCat__20C1E124">
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="ActualizarEstadoSuscripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Codigo" Type="int" Mode="In" />
+          <Parameter Name="Estado" Type="int" Mode="In" />
+          <Parameter Name="Cod_Trabajador" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ListarSusc_PorEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="PlanMasSolicitado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_ActualizarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCategoria" Type="int" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarClase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdClases" Type="int" Mode="In" />
+          <Parameter Name="NombreClase" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCliente" Type="int" Mode="In" />
+          <Parameter Name="Estado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarEstadoClase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdClases" Type="int" Mode="In" />
+          <Parameter Name="Estado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarEstadoHorario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Estado" Type="int" Mode="In" />
+          <Parameter Name="IdHorario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarEstadoPedido" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPedidos" Type="int" Mode="In" />
+          <Parameter Name="Estado" Type="int" Mode="In" />
+          <Parameter Name="IdTrabajador" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarEstadoProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Estado" Type="int" Mode="In" />
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarEstadoTrabajador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdTrabajador" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+          <Parameter Name="NombreProducto" Type="varchar" Mode="In" />
+          <Parameter Name="Precio" Type="money" Mode="In" />
+          <Parameter Name="Descripcion" Type="text" Mode="In" />
+          <Parameter Name="ImagenProducto" Type="varchar" Mode="In" />
+          <Parameter Name="IdCategoria" Type="int" Mode="In" />
+          <Parameter Name="CantidadProductos" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ActualizarStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+          <Parameter Name="Cantidad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_BuscarHorario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdHorario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_BuscarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ClasesPorInstructor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_ClientesMasPedidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_IngresoCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_IngresoTrabajador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarClase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NombreClase" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Apellidos" Type="varchar" Mode="In" />
+          <Parameter Name="Dni" Type="varchar" Mode="In" />
+          <Parameter Name="Edad" Type="int" Mode="In" />
+          <Parameter Name="Sexo" Type="int" Mode="In" />
+          <Parameter Name="Distrito" Type="int" Mode="In" />
+          <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarDetallePedido" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MontoTotal" Type="money" Mode="In" />
+          <Parameter Name="Precio" Type="money" Mode="In" />
+          <Parameter Name="Cantidad" Type="int" Mode="In" />
+          <Parameter Name="IdPedidos" Type="int" Mode="In" />
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarHorarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Instructor" Type="varchar" Mode="In" />
+          <Parameter Name="Hora" Type="varchar" Mode="In" />
+          <Parameter Name="Dia" Type="varchar" Mode="In" />
+          <Parameter Name="IdClases" Type="int" Mode="In" />
+          <Parameter Name="IdTrabajador" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarPedido" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MetodoPago" Type="int" Mode="In" />
+          <Parameter Name="IdCliente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NombreProducto" Type="varchar" Mode="In" />
+          <Parameter Name="Precio" Type="money" Mode="In" />
+          <Parameter Name="Descripcion" Type="text" Mode="In" />
+          <Parameter Name="IdCategoria" Type="int" Mode="In" />
+          <Parameter Name="ImagenProducto" Type="varchar" Mode="In" />
+          <Parameter Name="CantidadProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_InsertarTrabajador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Apellidos" Type="varchar" Mode="In" />
+          <Parameter Name="Dni" Type="varchar" Mode="In" />
+          <Parameter Name="Edad" Type="int" Mode="In" />
+          <Parameter Name="Sexo" Type="int" Mode="In" />
+          <Parameter Name="Distrito" Type="int" Mode="In" />
+          <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Listar_Combos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OP" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ListarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_ListarCategoriaProductoXEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Categoria" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ListarClase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_ListarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ListarHorariosXDia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Dia" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ListarMisPedidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCliente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ListarPedidosPorEstados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ListarTrabajador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_ModificarHorarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Instructor" Type="varchar" Mode="In" />
+          <Parameter Name="IdClases" Type="int" Mode="In" />
+          <Parameter Name="IdTrabajador" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Sp_ReporteXFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_SusAceptadasMes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_ValidarUsuarioCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_ValidarUsuarioTrabajador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_VerDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPedidos" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SuplementoMasVendido" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Suscripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono" Type="varchar" Mode="In" />
+          <Parameter Name="Planes" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="GymNautilusModelStoreContainer">
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clases" EntityType="Self.Clases" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Horarios" EntityType="Self.Horarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pedidos" EntityType="Self.Pedidos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Planes" EntityType="Self.Planes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_TABLAS" EntityType="Self.T_TABLAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_TIPOTABLA" EntityType="Self.T_TIPOTABLA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trabajador" EntityType="Self.Trabajador" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__DetallePe__IdPed__2C3393D0" Association="Self.FK__DetallePe__IdPed__2C3393D0">
+            <End Role="Pedidos" EntitySet="Pedidos" />
+            <End Role="DetallePedido" EntitySet="DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetallePe__IdPro__2D27B809" Association="Self.FK__DetallePe__IdPro__2D27B809">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="DetallePedido" EntitySet="DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Horarios__IdClas__1B0907CE" Association="Self.FK__Horarios__IdClas__1B0907CE">
+            <End Role="Clases" EntitySet="Clases" />
+            <End Role="Horarios" EntitySet="Horarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Horarios__IdTrab__1BFD2C07" Association="Self.FK__Horarios__IdTrab__1BFD2C07">
+            <End Role="Trabajador" EntitySet="Trabajador" />
+            <End Role="Horarios" EntitySet="Horarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pedidos__IdClien__286302EC" Association="Self.FK__Pedidos__IdClien__286302EC">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pedidos__IdTraba__29572725" Association="Self.FK__Pedidos__IdTraba__29572725">
+            <End Role="Trabajador" EntitySet="Trabajador" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__IdCat__20C1E124" Association="Self.FK__Productos__IdCat__20C1E124">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GymNautilusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__IdCat__20C1E124" FromRole="Categoria" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Clases">
+          <Key>
+            <PropertyRef Name="IdClases" />
+          </Key>
+          <Property Name="IdClases" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreClase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <NavigationProperty Name="Horarios" Relationship="Self.FK__Horarios__IdClas__1B0907CE" FromRole="Clases" ToRole="Horarios" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Dni" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Edad" Type="Int32" />
+          <Property Name="Sexo" Type="Int32" />
+          <Property Name="Distrito" Type="Int32" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Pedidos" Relationship="Self.FK__Pedidos__IdClien__286302EC" FromRole="Cliente" ToRole="Pedidos" />
+        </EntityType>
+        <EntityType Name="DetallePedido">
+          <Key>
+            <PropertyRef Name="IdPedidos" />
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="MontoTotal" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Cantidad" Type="Int32" />
+          <Property Name="IdPedidos" Type="Int32" Nullable="false" />
+          <Property Name="IdProducto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pedidos" Relationship="Self.FK__DetallePe__IdPed__2C3393D0" FromRole="DetallePedido" ToRole="Pedidos" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallePe__IdPro__2D27B809" FromRole="DetallePedido" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Horarios">
+          <Key>
+            <PropertyRef Name="IdHorario" />
+          </Key>
+          <Property Name="IdHorario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Instructor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hora" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Dia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IdClases" Type="Int32" />
+          <Property Name="IdTrabajador" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <NavigationProperty Name="Clases" Relationship="Self.FK__Horarios__IdClas__1B0907CE" FromRole="Horarios" ToRole="Clases" />
+          <NavigationProperty Name="Trabajador" Relationship="Self.FK__Horarios__IdTrab__1BFD2C07" FromRole="Horarios" ToRole="Trabajador" />
+        </EntityType>
+        <EntityType Name="Pedidos">
+          <Key>
+            <PropertyRef Name="IdPedidos" />
+          </Key>
+          <Property Name="IdPedidos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MetodoPago" Type="Int32" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="0" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="IdCliente" Type="Int32" />
+          <Property Name="IdTrabajador" Type="Int32" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Pedidos__IdClien__286302EC" FromRole="Pedidos" ToRole="Cliente" />
+          <NavigationProperty Name="DetallePedido" Relationship="Self.FK__DetallePe__IdPed__2C3393D0" FromRole="Pedidos" ToRole="DetallePedido" />
+          <NavigationProperty Name="Trabajador" Relationship="Self.FK__Pedidos__IdTraba__29572725" FromRole="Pedidos" ToRole="Trabajador" />
+        </EntityType>
+        <EntityType Name="Planes">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Planes1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Cod_Trabajador" Type="Int32" />
+          <Property Name="FechaSuscripcion" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IdCategoria" Type="Int32" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="0" />
+          <Property Name="ImagenProducto" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CantidadProducto" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <NavigationProperty Name="Categoria" Relationship="Self.FK__Productos__IdCat__20C1E124" FromRole="Productos" ToRole="Categoria" />
+          <NavigationProperty Name="DetallePedido" Relationship="Self.FK__DetallePe__IdPro__2D27B809" FromRole="Productos" ToRole="DetallePedido" />
+        </EntityType>
+        <EntityType Name="T_TABLAS">
+          <Key>
+            <PropertyRef Name="T_IDCAMPO" />
+          </Key>
+          <Property Name="T_IDCAMPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="T_IDTIPOTABLA" Type="Int32" />
+          <Property Name="T_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_VER" Type="Int32" />
+          <Property Name="T_VALOR" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_TIPOTABLA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TP_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TP_DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trabajador">
+          <Key>
+            <PropertyRef Name="IdTrabajador" />
+          </Key>
+          <Property Name="IdTrabajador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Dni" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Edad" Type="Int32" />
+          <Property Name="Sexo" Type="Int32" />
+          <Property Name="Distrito" Type="Int32" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Horarios" Relationship="Self.FK__Horarios__IdTrab__1BFD2C07" FromRole="Trabajador" ToRole="Horarios" />
+          <NavigationProperty Name="Pedidos" Relationship="Self.FK__Pedidos__IdTraba__29572725" FromRole="Trabajador" ToRole="Pedidos" />
+        </EntityType>
+        <Association Name="FK__Productos__IdCat__20C1E124">
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Horarios__IdClas__1B0907CE">
+          <End Role="Clases" Type="Self.Clases" Multiplicity="0..1" />
+          <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clases">
+              <PropertyRef Name="IdClases" />
+            </Principal>
+            <Dependent Role="Horarios">
+              <PropertyRef Name="IdClases" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pedidos__IdClien__286302EC">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetallePe__IdPed__2C3393D0">
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="1" />
+          <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedidos">
+              <PropertyRef Name="IdPedidos" />
+            </Principal>
+            <Dependent Role="DetallePedido">
+              <PropertyRef Name="IdPedidos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetallePe__IdPro__2D27B809">
+          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+          <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IdProducto" />
+            </Principal>
+            <Dependent Role="DetallePedido">
+              <PropertyRef Name="IdProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Horarios__IdTrab__1BFD2C07">
+          <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="0..1" />
+          <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trabajador">
+              <PropertyRef Name="IdTrabajador" />
+            </Principal>
+            <Dependent Role="Horarios">
+              <PropertyRef Name="IdTrabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pedidos__IdTraba__29572725">
+          <End Role="Trabajador" Type="Self.Trabajador" Multiplicity="0..1" />
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trabajador">
+              <PropertyRef Name="IdTrabajador" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="IdTrabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GymNautilusEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+          <EntitySet Name="Clases" EntityType="Self.Clases" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+          <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" />
+          <EntitySet Name="Horarios" EntityType="Self.Horarios" />
+          <EntitySet Name="Pedidos" EntityType="Self.Pedidos" />
+          <EntitySet Name="Planes" EntityType="Self.Planes" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" />
+          <EntitySet Name="T_TABLAS" EntityType="Self.T_TABLAS" />
+          <EntitySet Name="T_TIPOTABLA" EntityType="Self.T_TIPOTABLA" />
+          <EntitySet Name="Trabajador" EntityType="Self.Trabajador" />
+          <AssociationSet Name="FK__Productos__IdCat__20C1E124" Association="Self.FK__Productos__IdCat__20C1E124">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Horarios__IdClas__1B0907CE" Association="Self.FK__Horarios__IdClas__1B0907CE">
+            <End Role="Clases" EntitySet="Clases" />
+            <End Role="Horarios" EntitySet="Horarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pedidos__IdClien__286302EC" Association="Self.FK__Pedidos__IdClien__286302EC">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetallePe__IdPed__2C3393D0" Association="Self.FK__DetallePe__IdPed__2C3393D0">
+            <End Role="Pedidos" EntitySet="Pedidos" />
+            <End Role="DetallePedido" EntitySet="DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetallePe__IdPro__2D27B809" Association="Self.FK__DetallePe__IdPro__2D27B809">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="DetallePedido" EntitySet="DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Horarios__IdTrab__1BFD2C07" Association="Self.FK__Horarios__IdTrab__1BFD2C07">
+            <End Role="Trabajador" EntitySet="Trabajador" />
+            <End Role="Horarios" EntitySet="Horarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pedidos__IdTraba__29572725" Association="Self.FK__Pedidos__IdTraba__29572725">
+            <End Role="Trabajador" EntitySet="Trabajador" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <FunctionImport Name="ActualizarEstadoSuscripcion">
+            <Parameter Name="Codigo" Mode="In" Type="Int32" />
+            <Parameter Name="Estado" Mode="In" Type="Int32" />
+            <Parameter Name="Cod_Trabajador" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ListarSusc_PorEstado" ReturnType="Collection(GymNautilusModel.ListarSusc_PorEstado_Result)">
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PlanMasSolicitado" ReturnType="Collection(GymNautilusModel.PlanMasSolicitado_Result)" />
+          <FunctionImport Name="Sp_ActualizarCategoria">
+            <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarClase">
+            <Parameter Name="IdClases" Mode="In" Type="Int32" />
+            <Parameter Name="NombreClase" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarCliente">
+            <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+            <Parameter Name="Estado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarEstadoClase">
+            <Parameter Name="IdClases" Mode="In" Type="Int32" />
+            <Parameter Name="Estado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarEstadoHorario">
+            <Parameter Name="Estado" Mode="In" Type="Int32" />
+            <Parameter Name="IdHorario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarEstadoPedido">
+            <Parameter Name="IdPedidos" Mode="In" Type="Int32" />
+            <Parameter Name="Estado" Mode="In" Type="Int32" />
+            <Parameter Name="IdTrabajador" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarEstadoProducto">
+            <Parameter Name="Estado" Mode="In" Type="Int32" />
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarEstadoTrabajador">
+            <Parameter Name="IdTrabajador" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarProducto">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+            <Parameter Name="NombreProducto" Mode="In" Type="String" />
+            <Parameter Name="Precio" Mode="In" Type="Decimal" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="ImagenProducto" Mode="In" Type="String" />
+            <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+            <Parameter Name="CantidadProductos" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ActualizarStock">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+            <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_BuscarHorario" ReturnType="Collection(GymNautilusModel.Sp_BuscarHorario_Result)">
+            <Parameter Name="IdHorario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_BuscarProducto" ReturnType="Collection(GymNautilusModel.Sp_BuscarProducto_Result)">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ClasesPorInstructor" ReturnType="Collection(GymNautilusModel.Sp_ClasesPorInstructor_Result)" />
+          <FunctionImport Name="Sp_ClientesMasPedidos" ReturnType="Collection(GymNautilusModel.Sp_ClientesMasPedidos_Result)" />
+          <FunctionImport Name="Sp_IngresoCliente" ReturnType="Collection(GymNautilusModel.Sp_IngresoCliente_Result)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_IngresoTrabajador" ReturnType="Collection(GymNautilusModel.Sp_IngresoTrabajador_Result)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarCategoria">
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarClase">
+            <Parameter Name="NombreClase" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarCliente">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellidos" Mode="In" Type="String" />
+            <Parameter Name="Dni" Mode="In" Type="String" />
+            <Parameter Name="Edad" Mode="In" Type="Int32" />
+            <Parameter Name="Sexo" Mode="In" Type="Int32" />
+            <Parameter Name="Distrito" Mode="In" Type="Int32" />
+            <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarDetallePedido">
+            <Parameter Name="MontoTotal" Mode="In" Type="Decimal" />
+            <Parameter Name="Precio" Mode="In" Type="Decimal" />
+            <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+            <Parameter Name="IdPedidos" Mode="In" Type="Int32" />
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarHorarios">
+            <Parameter Name="Instructor" Mode="In" Type="String" />
+            <Parameter Name="Hora" Mode="In" Type="String" />
+            <Parameter Name="Dia" Mode="In" Type="String" />
+            <Parameter Name="IdClases" Mode="In" Type="Int32" />
+            <Parameter Name="IdTrabajador" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarPedido">
+            <Parameter Name="MetodoPago" Mode="In" Type="Int32" />
+            <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarProducto">
+            <Parameter Name="NombreProducto" Mode="In" Type="String" />
+            <Parameter Name="Precio" Mode="In" Type="Decimal" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+            <Parameter Name="ImagenProducto" Mode="In" Type="String" />
+            <Parameter Name="CantidadProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_InsertarTrabajador">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellidos" Mode="In" Type="String" />
+            <Parameter Name="Dni" Mode="In" Type="String" />
+            <Parameter Name="Edad" Mode="In" Type="Int32" />
+            <Parameter Name="Sexo" Mode="In" Type="Int32" />
+            <Parameter Name="Distrito" Mode="In" Type="Int32" />
+            <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Listar_Combos" ReturnType="Collection(GymNautilusModel.SP_Listar_Combos_Result)">
+            <Parameter Name="OP" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ListarCategoria" ReturnType="Collection(GymNautilusModel.Sp_ListarCategoria_Result)" />
+          <FunctionImport Name="Sp_ListarCategoriaProductoXEstado" ReturnType="Collection(GymNautilusModel.Sp_ListarCategoriaProductoXEstado_Result)">
+            <Parameter Name="Categoria" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ListarClase" ReturnType="Collection(GymNautilusModel.Sp_ListarClase_Result)" />
+          <FunctionImport Name="Sp_ListarCliente" ReturnType="Collection(GymNautilusModel.Sp_ListarCliente_Result)">
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ListarHorariosXDia" ReturnType="Collection(GymNautilusModel.Sp_ListarHorariosXDia_Result)">
+            <Parameter Name="Dia" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ListarMisPedidos" ReturnType="Collection(GymNautilusModel.Sp_ListarMisPedidos_Result)">
+            <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ListarPedidosPorEstados" ReturnType="Collection(GymNautilusModel.Sp_ListarPedidosPorEstados_Result)">
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ListarTrabajador" ReturnType="Collection(GymNautilusModel.Sp_ListarTrabajador_Result)" />
+          <FunctionImport Name="Sp_ModificarHorarios">
+            <Parameter Name="Instructor" Mode="In" Type="String" />
+            <Parameter Name="IdClases" Mode="In" Type="Int32" />
+            <Parameter Name="IdTrabajador" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ReporteXFecha" ReturnType="Collection(GymNautilusModel.Sp_ReporteXFecha_Result)" />
+          <FunctionImport Name="Sp_SusAceptadasMes" ReturnType="Collection(GymNautilusModel.Sp_SusAceptadasMes_Result)" />
+          <FunctionImport Name="Sp_ValidarUsuarioCliente" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_ValidarUsuarioTrabajador" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_VerDetalle" ReturnType="Collection(GymNautilusModel.Sp_VerDetalle_Result)">
+            <Parameter Name="IdPedidos" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SuplementoMasVendido" ReturnType="Collection(GymNautilusModel.SuplementoMasVendido_Result)" />
+          <FunctionImport Name="Suscripcion">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Planes" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="ListarSusc_PorEstado_Result">
+          <Property Type="Int32" Name="Codigo" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Planes" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="12" />
+          <Property Type="DateTime" Name="FechaSuscripcion" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PlanMasSolicitado_Result">
+          <Property Type="String" Name="Planes" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Sp_BuscarHorario_Result">
+          <Property Type="Int32" Name="IdHorario" Nullable="false" />
+          <Property Type="String" Name="Hora" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Instructor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="IdClases" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Sp_BuscarProducto_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ImagenProducto" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="IdCategoria" Nullable="true" />
+          <Property Type="Int32" Name="CantidadProducto" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Sp_ClasesPorInstructor_Result">
+          <Property Type="String" Name="Instructor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Sp_ClientesMasPedidos_Result">
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="CantidadPedidos" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Sp_IngresoCliente_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Contrasena" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="IdCliente" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Sp_IngresoTrabajador_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Contrasena" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="IdTrabajador" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Listar_Combos_Result">
+          <Property Type="Int32" Name="T_IDCAMPO" Nullable="false" />
+          <Property Type="String" Name="T_NOMBRE" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarCategoria_Result">
+          <Property Type="Int32" Name="IdCategoria" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarCategoriaProductoXEstado_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ImagenProducto" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="IdCategoria" Nullable="true" />
+          <Property Type="Int32" Name="CantidadProducto" Nullable="true" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarClase_Result">
+          <Property Type="Int32" Name="IdClases" Nullable="false" />
+          <Property Type="String" Name="NombreClase" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarCliente_Result">
+          <Property Type="Int32" Name="IdCliente" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Dni" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="6" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarHorariosXDia_Result">
+          <Property Type="Int32" Name="IdHorario" Nullable="false" />
+          <Property Type="String" Name="Hora" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Instructor" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NombreClase" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Dia" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarMisPedidos_Result">
+          <Property Type="Int32" Name="IdPedidos" Nullable="false" />
+          <Property Type="String" Name="MetodoPago" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarPedidosPorEstados_Result">
+          <Property Type="Int32" Name="IdPedidos" Nullable="false" />
+          <Property Type="String" Name="MetodoPago" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Sp_ListarTrabajador_Result">
+          <Property Type="Int32" Name="IdTrabajador" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Dni" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Sp_ReporteXFecha_Result">
+          <Property Type="Int32" Name="IdPedidos" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+          <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" />
+          <Property Type="Decimal" Name="MontoTotal" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="Sp_SusAceptadasMes_Result">
+          <Property Type="Int32" Name="Codigo" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Planes" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="FechaSuscripcion" Nullable="true" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="Sp_VerDetalle_Result">
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+          <Property Type="Decimal" Name="MontoTotal" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SuplementoMasVendido_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Suplemento" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GymNautilusModelStoreContainer" CdmEntityContainer="GymNautilusEntities3">
+          <EntitySetMapping Name="Categoria">
+            <EntityTypeMapping TypeName="GymNautilusModel.Categoria">
+              <MappingFragment StoreEntitySet="Categoria">
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clases">
+            <EntityTypeMapping TypeName="GymNautilusModel.Clases">
+              <MappingFragment StoreEntitySet="Clases">
+                <ScalarProperty Name="IdClases" ColumnName="IdClases" />
+                <ScalarProperty Name="NombreClase" ColumnName="NombreClase" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="GymNautilusModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetallePedido">
+            <EntityTypeMapping TypeName="GymNautilusModel.DetallePedido">
+              <MappingFragment StoreEntitySet="DetallePedido">
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Horarios">
+            <EntityTypeMapping TypeName="GymNautilusModel.Horarios">
+              <MappingFragment StoreEntitySet="Horarios">
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="IdClases" ColumnName="IdClases" />
+                <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pedidos">
+            <EntityTypeMapping TypeName="GymNautilusModel.Pedidos">
+              <MappingFragment StoreEntitySet="Pedidos">
+                <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+                <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Planes">
+            <EntityTypeMapping TypeName="GymNautilusModel.Planes">
+              <MappingFragment StoreEntitySet="Planes">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Planes1" ColumnName="Planes" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Cod_Trabajador" ColumnName="Cod_Trabajador" />
+                <ScalarProperty Name="FechaSuscripcion" ColumnName="FechaSuscripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="GymNautilusModel.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+                <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_TABLAS">
+            <EntityTypeMapping TypeName="GymNautilusModel.T_TABLAS">
+              <MappingFragment StoreEntitySet="T_TABLAS">
+                <ScalarProperty Name="T_IDCAMPO" ColumnName="T_IDCAMPO" />
+                <ScalarProperty Name="T_IDTIPOTABLA" ColumnName="T_IDTIPOTABLA" />
+                <ScalarProperty Name="T_NOMBRE" ColumnName="T_NOMBRE" />
+                <ScalarProperty Name="T_VER" ColumnName="T_VER" />
+                <ScalarProperty Name="T_VALOR" ColumnName="T_VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_TIPOTABLA">
+            <EntityTypeMapping TypeName="GymNautilusModel.T_TIPOTABLA">
+              <MappingFragment StoreEntitySet="T_TIPOTABLA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TP_NOMBRE" ColumnName="TP_NOMBRE" />
+                <ScalarProperty Name="TP_DESCRIPCION" ColumnName="TP_DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trabajador">
+            <EntityTypeMapping TypeName="GymNautilusModel.Trabajador">
+              <MappingFragment StoreEntitySet="Trabajador">
+                <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ActualizarEstadoSuscripcion" FunctionName="GymNautilusModel.Store.ActualizarEstadoSuscripcion" />
+          <FunctionImportMapping FunctionImportName="ListarSusc_PorEstado" FunctionName="GymNautilusModel.Store.ListarSusc_PorEstado">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.ListarSusc_PorEstado_Result">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Planes" ColumnName="Planes" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaSuscripcion" ColumnName="FechaSuscripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PlanMasSolicitado" FunctionName="GymNautilusModel.Store.PlanMasSolicitado">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.PlanMasSolicitado_Result">
+                <ScalarProperty Name="Planes" ColumnName="Planes" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarCategoria" FunctionName="GymNautilusModel.Store.Sp_ActualizarCategoria" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarClase" FunctionName="GymNautilusModel.Store.Sp_ActualizarClase" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarCliente" FunctionName="GymNautilusModel.Store.Sp_ActualizarCliente" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarEstadoClase" FunctionName="GymNautilusModel.Store.Sp_ActualizarEstadoClase" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarEstadoHorario" FunctionName="GymNautilusModel.Store.Sp_ActualizarEstadoHorario" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarEstadoPedido" FunctionName="GymNautilusModel.Store.Sp_ActualizarEstadoPedido" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarEstadoProducto" FunctionName="GymNautilusModel.Store.Sp_ActualizarEstadoProducto" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarEstadoTrabajador" FunctionName="GymNautilusModel.Store.Sp_ActualizarEstadoTrabajador" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarProducto" FunctionName="GymNautilusModel.Store.Sp_ActualizarProducto" />
+          <FunctionImportMapping FunctionImportName="Sp_ActualizarStock" FunctionName="GymNautilusModel.Store.Sp_ActualizarStock" />
+          <FunctionImportMapping FunctionImportName="Sp_BuscarHorario" FunctionName="GymNautilusModel.Store.Sp_BuscarHorario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_BuscarHorario_Result">
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+                <ScalarProperty Name="IdClases" ColumnName="IdClases" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_BuscarProducto" FunctionName="GymNautilusModel.Store.Sp_BuscarProducto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_BuscarProducto_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ClasesPorInstructor" FunctionName="GymNautilusModel.Store.Sp_ClasesPorInstructor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ClasesPorInstructor_Result">
+                <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ClientesMasPedidos" FunctionName="GymNautilusModel.Store.Sp_ClientesMasPedidos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ClientesMasPedidos_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CantidadPedidos" ColumnName="CantidadPedidos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_IngresoCliente" FunctionName="GymNautilusModel.Store.Sp_IngresoCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_IngresoCliente_Result">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_IngresoTrabajador" FunctionName="GymNautilusModel.Store.Sp_IngresoTrabajador">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_IngresoTrabajador_Result">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_InsertarCategoria" FunctionName="GymNautilusModel.Store.Sp_InsertarCategoria" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarClase" FunctionName="GymNautilusModel.Store.Sp_InsertarClase" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarCliente" FunctionName="GymNautilusModel.Store.Sp_InsertarCliente" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarDetallePedido" FunctionName="GymNautilusModel.Store.Sp_InsertarDetallePedido" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarHorarios" FunctionName="GymNautilusModel.Store.Sp_InsertarHorarios" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarPedido" FunctionName="GymNautilusModel.Store.Sp_InsertarPedido" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarProducto" FunctionName="GymNautilusModel.Store.Sp_InsertarProducto" />
+          <FunctionImportMapping FunctionImportName="Sp_InsertarTrabajador" FunctionName="GymNautilusModel.Store.Sp_InsertarTrabajador" />
+          <FunctionImportMapping FunctionImportName="SP_Listar_Combos" FunctionName="GymNautilusModel.Store.SP_Listar_Combos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.SP_Listar_Combos_Result">
+                <ScalarProperty Name="T_IDCAMPO" ColumnName="T_IDCAMPO" />
+                <ScalarProperty Name="T_NOMBRE" ColumnName="T_NOMBRE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarCategoria" FunctionName="GymNautilusModel.Store.Sp_ListarCategoria">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarCategoria_Result">
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarCategoriaProductoXEstado" FunctionName="GymNautilusModel.Store.Sp_ListarCategoriaProductoXEstado">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarCategoriaProductoXEstado_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarClase" FunctionName="GymNautilusModel.Store.Sp_ListarClase">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarClase_Result">
+                <ScalarProperty Name="IdClases" ColumnName="IdClases" />
+                <ScalarProperty Name="NombreClase" ColumnName="NombreClase" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarCliente" FunctionName="GymNautilusModel.Store.Sp_ListarCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarCliente_Result">
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarHorariosXDia" FunctionName="GymNautilusModel.Store.Sp_ListarHorariosXDia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarHorariosXDia_Result">
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+                <ScalarProperty Name="NombreClase" ColumnName="NombreClase" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarMisPedidos" FunctionName="GymNautilusModel.Store.Sp_ListarMisPedidos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarMisPedidos_Result">
+                <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+                <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarPedidosPorEstados" FunctionName="GymNautilusModel.Store.Sp_ListarPedidosPorEstados">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarPedidosPorEstados_Result">
+                <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+                <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ListarTrabajador" FunctionName="GymNautilusModel.Store.Sp_ListarTrabajador">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarTrabajador_Result">
+                <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ModificarHorarios" FunctionName="GymNautilusModel.Store.Sp_ModificarHorarios" />
+          <FunctionImportMapping FunctionImportName="Sp_ReporteXFecha" FunctionName="GymNautilusModel.Store.Sp_ReporteXFecha">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ReporteXFecha_Result">
+                <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_SusAceptadasMes" FunctionName="GymNautilusModel.Store.Sp_SusAceptadasMes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_SusAceptadasMes_Result">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Planes" ColumnName="Planes" />
+                <ScalarProperty Name="FechaSuscripcion" ColumnName="FechaSuscripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ValidarUsuarioCliente" FunctionName="GymNautilusModel.Store.Sp_ValidarUsuarioCliente" />
+          <FunctionImportMapping FunctionImportName="Sp_ValidarUsuarioTrabajador" FunctionName="GymNautilusModel.Store.Sp_ValidarUsuarioTrabajador" />
+          <FunctionImportMapping FunctionImportName="Sp_VerDetalle" FunctionName="GymNautilusModel.Store.Sp_VerDetalle">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.Sp_VerDetalle_Result">
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SuplementoMasVendido" FunctionName="GymNautilusModel.Store.SuplementoMasVendido">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GymNautilusModel.SuplementoMasVendido_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Suplemento" ColumnName="Suplemento" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Suscripcion" FunctionName="GymNautilusModel.Store.Suscripcion" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

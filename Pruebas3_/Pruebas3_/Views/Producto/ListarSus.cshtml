@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "ListarSus";
+    var SuscriProcesar = ViewBag.SuscripXProcesar;
+    var SuscriAceptadas = ViewBag.SuscripAceptadas;
+    var SuscriRechazadas = ViewBag.SuscripRechazadas;
+}
+
+
+<h2>Suscripciones</h2>
+
+@if (Session["IdTrabajador"] != null)
+{
+
+
+
+    <div id="exTab2" class="container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#1" data-toggle="tab">Suscripciones en proceso</a>
+            </li>
+            <li>
+                <a href="#2" data-toggle="tab">Suscripciones aceptadas</a>
+            </li>
+            <li>
+                <a href="#3" data-toggle="tab">Suscripciones rechazadas</a>
+            </li>
+        </ul>
+
+        <div class="tab-content ">
+            <div class="tab-pane active" id="1">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>Cliente</b></td>
+                            <td><b>Email</b></td>
+                            <td><b>Telefono</b></td>
+                            <td><b>Plan</b></td>
+                            <td><b>Fecha</b></td>
+                            <td><b>Estado</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var susp in SuscriProcesar)
+                        {
+                            using (Html.BeginForm("ActualizarSusc_Aceptada", "Producto", FormMethod.Post))
+                            {
+                                <tr>
+                                    <td hidden><input type="text" value="@susp.Codigo" name="cod" /></td>
+                                    <td>@susp.Nombre</td>
+                                    <td>@susp.Email</td>
+                                    <td>@susp.Telefono</td>
+                                    <td>@susp.Planes</td>
+                                    <td>@string.Format("{0:yyyy-MM-dd}",susp.FechaSuscripcion)</td>
+                                    <td>@susp.Estado</td>
+                                    <td><input type="submit" value="Aceptar" class="btn btn-primary" /></td>
+                                    <td><input type="submit" value="Rechazar" formaction="@Url.Action("ActualizarSusc_Rechazada", "Producto")" class="btn btn-primary" /></td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>Cliente</b></td>
+                            <td><b>Email</b></td>
+                            <td><b>Telefono</b></td>
+                            <td><b>Plan</b></td>
+                            <td><b>Fecha</b></td>
+                            <td><b>Estado</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var susa in SuscriAceptadas)
+                        {
+                            using (Html.BeginForm())
+                            {
+                                <tr>
+                                    <td hidden><input type="text" value="@susa.Codigo" name="cod" /></td>
+                                    <td>@susa.Nombre</td>
+                                    <td>@susa.Email</td>
+                                    <td>@susa.Telefono</td>
+                                    <td>@susa.Planes</td>
+                                    <td>@string.Format("{0:yyyy-MM-dd}",susa.FechaSuscripcion)</td>
+                                    <td>@susa.Estado</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>Cliente</b></td>
+                            <td><b>Email</b></td>
+                            <td><b>Telefono</b></td>
+                            <td><b>Plan</b></td>
+                            <td><b>Fecha</b></td>
+                            <td><b>Estado</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var susr in SuscriRechazadas)
+                        {
+                            using (Html.BeginForm())
+                            {
+                                <tr>
+                                    <td hidden><input type="text" value="@susr.Codigo" name="cod" /></td>
+                                    <td>@susr.Nombre</td>
+                                    <td>@susr.Email</td>
+                                    <td>@susr.Telefono</td>
+                                    <td>@susr.Planes</td>
+                                    <td>@string.Format("{0:yyyy-MM-dd}",susr.FechaSuscripcion)</td>
+                                    <td>@susr.Estado</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+    </div>
+
+}
+else
+{
+    Response.Redirect("~/Trabajador/LoginTrabajador");
+}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GymNautilusModelStoreContainer" CdmEntityContainer="GymNautilusEntities1">
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="GymNautilusModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clases">
+      <EntityTypeMapping TypeName="GymNautilusModel.Clases">
+        <MappingFragment StoreEntitySet="Clases">
+          <ScalarProperty Name="IdClases" ColumnName="IdClases" />
+          <ScalarProperty Name="NombreClase" ColumnName="NombreClase" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="GymNautilusModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+          <ScalarProperty Name="IdDistrito" ColumnName="IdDistrito" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetallePedido">
+      <EntityTypeMapping TypeName="GymNautilusModel.DetallePedido">
+        <MappingFragment StoreEntitySet="DetallePedido">
+          <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distritos">
+      <EntityTypeMapping TypeName="GymNautilusModel.Distritos">
+        <MappingFragment StoreEntitySet="Distritos">
+          <ScalarProperty Name="IdDistrito" ColumnName="IdDistrito" />
+          <ScalarProperty Name="DistritoDescription" ColumnName="DistritoDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="GymNautilusModel.Horarios">
+        <MappingFragment StoreEntitySet="Horarios">
+          <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+          <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+          <ScalarProperty Name="IdClases" ColumnName="IdClases" />
+          <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedidos">
+      <EntityTypeMapping TypeName="GymNautilusModel.Pedidos">
+        <MappingFragment StoreEntitySet="Pedidos">
+          <ScalarProperty Name="IdPedidos" ColumnName="IdPedidos" />
+          <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="GymNautilusModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+          <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sexo">
+      <EntityTypeMapping TypeName="GymNautilusModel.Sexo">
+        <MappingFragment StoreEntitySet="Sexo">
+          <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+          <ScalarProperty Name="SexoDescripcion" ColumnName="SexoDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_TABLAS">
+      <EntityTypeMapping TypeName="GymNautilusModel.T_TABLAS">
+        <MappingFragment StoreEntitySet="T_TABLAS">
+          <ScalarProperty Name="T_IDCAMPO" ColumnName="T_IDCAMPO" />
+          <ScalarProperty Name="T_IDTIPOTABLA" ColumnName="T_IDTIPOTABLA" />
+          <ScalarProperty Name="T_NOMBRE" ColumnName="T_NOMBRE" />
+          <ScalarProperty Name="T_VER" ColumnName="T_VER" />
+          <ScalarProperty Name="T_VALOR" ColumnName="T_VALOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_TIPOTABLA">
+      <EntityTypeMapping TypeName="GymNautilusModel.T_TIPOTABLA">
+        <MappingFragment StoreEntitySet="T_TIPOTABLA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TP_NOMBRE" ColumnName="TP_NOMBRE" />
+          <ScalarProperty Name="TP_DESCRIPCION" ColumnName="TP_DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trabajador">
+      <EntityTypeMapping TypeName="GymNautilusModel.Trabajador">
+        <MappingFragment StoreEntitySet="Trabajador">
+          <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+          <ScalarProperty Name="IdDistrito" ColumnName="IdDistrito" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="prueba" FunctionName="GymNautilusModel.Store.prueba" />
+    <FunctionImportMapping FunctionImportName="Sp_ActualizarCliente" FunctionName="GymNautilusModel.Store.Sp_ActualizarCliente" />
+    <FunctionImportMapping FunctionImportName="Sp_ActualizarEstadoTrabajador" FunctionName="GymNautilusModel.Store.Sp_ActualizarEstadoTrabajador" />
+    <FunctionImportMapping FunctionImportName="Sp_IngresoCliente" FunctionName="GymNautilusModel.Store.Sp_IngresoCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_IngresoCliente_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_IngresoTrabajador" FunctionName="GymNautilusModel.Store.Sp_IngresoTrabajador">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_IngresoTrabajador_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_InsertarClase" FunctionName="GymNautilusModel.Store.Sp_InsertarClase" />
+    <FunctionImportMapping FunctionImportName="Sp_InsertarCliente" FunctionName="GymNautilusModel.Store.Sp_InsertarCliente" />
+    <FunctionImportMapping FunctionImportName="Sp_InsertarTrabajador" FunctionName="GymNautilusModel.Store.Sp_InsertarTrabajador" />
+    <FunctionImportMapping FunctionImportName="SP_Listar_Combos" FunctionName="GymNautilusModel.Store.SP_Listar_Combos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.SP_Listar_Combos_Result">
+          <ScalarProperty Name="T_IDCAMPO" ColumnName="T_IDCAMPO" />
+          <ScalarProperty Name="T_NOMBRE" ColumnName="T_NOMBRE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ListarCategoria" FunctionName="GymNautilusModel.Store.Sp_ListarCategoria">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarCategoria_Result">
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ListarCategoriaProducto" FunctionName="GymNautilusModel.Store.Sp_ListarCategoriaProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarCategoriaProducto_Result">
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ListarCliente" FunctionName="GymNautilusModel.Store.Sp_ListarCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarCliente_Result">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ListarDistrito" FunctionName="GymNautilusModel.Store.Sp_ListarDistrito">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarDistrito_Result">
+          <ScalarProperty Name="IdDistrito" ColumnName="IdDistrito" />
+          <ScalarProperty Name="DistritoDescription" ColumnName="DistritoDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ListarSexo" FunctionName="GymNautilusModel.Store.Sp_ListarSexo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarSexo_Result">
+          <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+          <ScalarProperty Name="SexoDescripcion" ColumnName="SexoDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ListarTrabajador" FunctionName="GymNautilusModel.Store.Sp_ListarTrabajador">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GymNautilusModel.Sp_ListarTrabajador_Result">
+          <ScalarProperty Name="IdTrabajador" ColumnName="IdTrabajador" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ValidarUsuarioCliente" FunctionName="GymNautilusModel.Store.Sp_ValidarUsuarioCliente" />
+    <FunctionImportMapping FunctionImportName="Sp_ValidarUsuarioTrabajador" FunctionName="GymNautilusModel.Store.Sp_ValidarUsuarioTrabajador" />
+    <FunctionImportMapping FunctionImportName="Sp_InsertarProducto" FunctionName="GymNautilusModel.Store.Sp_InsertarProducto" />
+  </EntityContainerMapping>
+</Mapping>

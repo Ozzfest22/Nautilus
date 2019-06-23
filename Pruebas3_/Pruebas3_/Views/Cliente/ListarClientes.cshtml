@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "ListarClientes";
+    var Activos = ViewBag.ClientesActivos;
+    var Eliminados = ViewBag.ClientesEliminados;
+}
+
+<h2>Lista de Clientes</h2>
+
+@if (Session["IdTrabajador"] != null)
+{
+    <div id="exTab2" class="container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#1" data-toggle="tab">Clientes</a>
+            </li>
+            <li>
+                <a href="#2" data-toggle="tab">Clientes Eliminados</a>
+            </li>
+        </ul>
+
+        <div class="tab-content ">
+            <div class="tab-pane active" id="1">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>Nombre</b></td>
+                            <td><b>Apellidos</b></td>
+                            <td><b>Dni</b></td>
+                            <td><b>Email</b></td>
+                            <td><b>Estado</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var act in Activos)
+                        {
+                            using (Html.BeginForm("ActualizarAEliminado", "Cliente", FormMethod.Post))
+                            {
+                                <tr>
+                                    <td hidden><input type="text" value="@act.IdCliente" name="cod" /></td>
+                                    <td>@act.Nombre</td>
+                                    <td>@act.Apellidos</td>
+                                    <td>@act.Dni</td>
+                                    <td>@act.Email</td>
+                                    <td>@act.Estado</td>
+                                    <td><input type="submit" value="Eliminar" onclick=Alerta() class="btn btn-primary" /></td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>Nombre</b></td>
+                            <td><b>Apellidos</b></td>
+                            <td><b>Dni</b></td>
+                            <td><b>Email</b></td>
+                            <td><b>Estado</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var eli in Eliminados)
+                        {
+                                <tr>
+                                    <td hidden><input type="text" value="@eli.IdCliente" name="cod" /></td>
+                                    <td>@eli.Nombre</td>
+                                    <td>@eli.Apellidos</td>
+                                    <td>@eli.Dni</td>
+                                    <td>@eli.Email</td>
+                                    <td>@eli.Estado</td>
+                                </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+    </div>
+
+}
+else
+{
+    Response.Redirect("~/Trabajador/LoginTrabajador");
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+    function Alerta() {
+    alert ("Cliente Eliminado");
+    }
+
+</SCRIPT>

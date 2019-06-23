@@ -1,0 +1,31 @@
+﻿
+@if (Session["IdCliente"] != null && (Session["EmailCli"] != null))
+{
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Hola " + Session["NombreCli"] + "!", "MisPedidos", "Pedidos", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
+        <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Cliente")</li>
+    </ul>
+
+}
+else if ((Session["IdTrabajador"] != null) && (Session["EmailTra"] != null))
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Hola " + Session["NombreTra"] + "!", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
+        <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesionTrabajador", "Trabajador")</li>
+    </ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Registrarse", "RegistrarCliente", "Cliente", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Iniciar sesión", "Login", "Cliente", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmacionTraRegistrado";
+}
+
+@if (Session["IdTrabajador"] != null)
+{
+    <div class="jumbotron">
+
+        <center><h2>Trabajador registrado correctamente</h2></center>
+        <center>@Html.ActionLink("Regresar", "RegistrarTrabajador", "Trabajador", null, new { @class = "btn btn-primary" })</center>
+    </div>
+}
+else
+{
+    Response.Redirect("~/Trabajador/LoginTrabajador");
+}
+

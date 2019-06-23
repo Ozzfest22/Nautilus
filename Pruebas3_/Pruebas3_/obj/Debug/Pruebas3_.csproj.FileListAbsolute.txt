@@ -1,0 +1,508 @@
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\ApplicationInsights.config
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\csc.exe
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\System.Collections.Immutable.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\vbc.exe
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe.config
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll.config
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Pruebas3_.pdb
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\EntityFramework.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Web.Infrastructure.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Owin.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Razor.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\WebGrease.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.Razor.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.pdb
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\EntityFramework.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.Helpers.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.Mvc.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.Optimization.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.Razor.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Deployment.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Razor.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\EntityFramework.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\EntityFramework.SqlServer.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Google.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.dll
+c:\users\w7\documents\visual studio 2015\Projects\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.pdb
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\ApplicationInsights.config
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\csc.exe
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\vbc.exe
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll.config
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Pruebas3_.pdb
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\EntityFramework.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Owin.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Razor.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\WebGrease.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.Razor.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.pdb
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\EntityFramework.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.Razor.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\EntityFramework.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csproj.CoreCompileInputs.cache
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csproj.CopyComplete
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.dll
+C:\Users\Docente\Desktop\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.pdb
+D:\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csproj.CoreCompileInputs.cache
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\ApplicationInsights.config
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\csc.exe
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\System.Collections.Immutable.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\System.Reflection.Metadata.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\vbc.exe
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe.config
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll.config
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.pdb
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Agent.Intercept.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Web.Infrastructure.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Owin.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Razor.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\WebGrease.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Razor.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.pdb
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Helpers.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Mvc.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Optimization.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Razor.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\EntityFramework.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\EntityFramework.SqlServer.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csproj.CopyComplete
+D:\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.dll
+D:\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.pdb
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\ApplicationInsights.config
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\csc.exe
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\vbc.exe
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll.config
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.pdb
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Owin.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Razor.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\WebGrease.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Razor.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.pdb
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Helpers.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Mvc.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Optimization.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Razor.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\EntityFramework.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.dll
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.pdb
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\ApplicationInsights.config
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\csc.exe
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\vbc.exe
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll.config
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Pruebas3_.pdb
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Owin.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Razor.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\WebGrease.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.Web.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Helpers.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Mvc.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Optimization.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.Razor.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\System.Web.WebPages.Razor.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Antlr3.Runtime.pdb
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Newtonsoft.Json.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\EntityFramework.SqlServer.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.Razor.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\EntityFramework.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csprojAssemblyReference.cache
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csproj.CoreCompileInputs.cache
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csproj.CopyComplete
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.dll
+C:\Users\Docente\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.pdb
+C:\Users\w7\Desktop\avance pruebas3\Pruebas3_\Pruebas3_\obj\Debug\Pruebas3_.csprojResolveAssemblyReference.cache

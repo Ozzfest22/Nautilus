@@ -1,0 +1,118 @@
+﻿@model Pruebas3_.Models.PedidoView
+@using System.Globalization
+@{
+    ViewBag.Title = "AgregaCarrito";
+
+}
+
+
+@if (Session["IdCliente"] == null)
+{
+    <h2>Mi Carrito</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>Cantidad</th>
+    <th>Total</th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        @{
+            double total = 0;
+        }
+        @if (Session["carrito"] != null)
+        {
+            foreach (var item in Session["carrito"] as List<Pruebas3_.Models.CarritoCompras>)
+            {
+                total += (double)(Math.Abs(item.Cantidad) * item.Productos.Precio);
+                <tr>
+                    <td>@item.Productos.NombreProducto</td>
+                    <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", item.Productos.Precio)</td>
+                    <td>@Math.Abs(item.Cantidad)</td>
+                    <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", (Math.Abs(item.Cantidad) * item.Productos.Precio))</td>
+                    @using (Html.BeginForm("Eliminar","Carrito"))
+                    {
+                    <td>@Html.ActionLink("Eliminar", "Eliminar", "Carrito", new { Id = item.Productos.IdProducto }, new { @class = "btn btn-primary" })</td>}
+                </tr>
+            }
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">Total</th>
+            <th>@String.Format(new CultureInfo("es-PE"), "{0:C}", total)</th>
+        </tr>
+        <tr>
+        <td>@Html.ActionLink("Seguir comprando", "ListarProductos2", "Producto",null,new {@class="btn btn-primary" })</td>
+        </tr>
+    </tfoot>
+</table>
+            }
+            else
+            {
+                <h2>Carrito de @Session["NombreCli"]</h2>
+
+                using (Html.BeginForm("FinalizarCompra","Carrito"))
+                {
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                 
+                        @{
+                            double total = 0;
+                        }
+                        @if (Session["carrito"] != null)
+                        {
+                            foreach (var item in Session["carrito"] as List<Pruebas3_.Models.CarritoCompras>)
+                            {
+                                total += (double)(Math.Abs(item.Cantidad) * item.Productos.Precio);
+                                <tr>
+                                    <td>@item.Productos.NombreProducto</td>
+                                    <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", item.Productos.Precio)</td>
+                                    <td>@Math.Abs(item.Cantidad)</td>
+                                    <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", (Math.Abs(item.Cantidad) * item.Productos.Precio))</td>
+                                    <td>@Html.ActionLink("Eliminar", "Eliminar", "Carrito", new { Id = item.Productos.IdProducto }, new { @class = "btn btn-primary" })</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">Total</th>
+                            <th>@String.Format(new CultureInfo("es-PE"), "{0:C}", total)</th>
+                        </tr>
+                        <tr>
+                            <th>Metodo de Pago</th>
+                            <th>@Html.DropDownListFor(model => model.MetodoPago, (IEnumerable<SelectListItem>)ViewBag.MetodoPago, htmlAttributes: new { @class = "form-control",@Name="ddl" })</th>
+                        </tr>
+                        <tr>
+                            <td>@Html.ActionLink("Seguir comprando", "ListarProductos2", "Producto",null, new { @class = "btn btn-primary" })</td>
+                            <td><input type="submit" value="Comprar" onclick=Alerta2() class="btn btn-primary" /></td>
+                        </tr>
+                        
+                    </tfoot>
+                </table>
+                                }
+                            }
+
+<SCRIPT LANGUAGE="JavaScript">
+    function Alerta2() {
+    alert ("Gracias por comprar en GymNautilus");
+    }
+</SCRIPT>
+
+
+
+                            

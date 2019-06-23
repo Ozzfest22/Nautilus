@@ -1,0 +1,179 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "ListarProductosEditar";
+    var ListarArt = ViewBag.ArticulosEditar;
+    var ListarPlan = ViewBag.PlanesEditar;
+    var ArtElim = ViewBag.ArticulosEliminados;
+    var PlanElim = ViewBag.PlanesEliminados;
+}
+
+@if (Session["IdTrabajador"] != null)
+{
+
+<h2>Productos en almacen</h2>
+
+<div id="exTab2" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab">Planes</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab">Articulos</a>
+        </li>
+        <li>
+            <a href="#3" data-toggle="tab">Planes Eliminados</a>
+        </li>
+        <li>
+            <a href="#4" data-toggle="tab">Articulos Eliminados</a>
+        </li>
+    </ul>
+
+    <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Nombre</b></td>
+                        <td><b>Imagen</b></td>
+                        <td><b>Precio</b></td>
+                        <td><b>Descripcion</b></td>
+                        <td><b>Estado</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var plan in ListarPlan)
+                    {
+                        using (Html.BeginForm("ActualizarEstadoProducto","Producto",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@plan.IdProducto" name="cod"/></td>
+                            <td>@plan.NombreProducto</td>
+                            <td><img class="img-responsive" src="@Url.Content(plan.ImagenProducto)" width="50" height="50" /></td>
+                            <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", plan.Precio)</td>
+                            <td>@plan.Descripcion</td>
+                            <td>@plan.Estado</td>
+                            <td>
+                                <center>@Html.ActionLink("Editar", "EditarPro", new { id = plan.IdProducto }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td><center><input  type="submit" value="Eliminar" class="btn btn-primary"/></center></td>
+                        </tr>}
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Nombre</b></td>
+                        <td><b>Imagen</b></td>
+                        <td><b>Precio</b></td>
+                        <td><b>Descripcion</b></td>
+                        <td><b>Cantidad</b></td>
+                        <td><b>Estado</b></td>
+                        <td colspan="2"><center><b>Accion</b></center></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var art in ListarArt)
+                    {
+                        using (Html.BeginForm("ActualizarEstadoProducto","Producto",FormMethod.Post))
+                        {
+                        <tr>
+                            <td hidden><input type="text" value="@art.IdProducto" name="cod"/></td>
+                            <td>@art.NombreProducto</td>
+                            <td><img class="img-responsive" src="@Url.Content(art.ImagenProducto)" width="50" height="50" /></td>
+                            <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", art.Precio)</td>
+                            <td>@art.Descripcion</td>
+                            <td>@art.CantidadProducto</td>
+                            <td>@art.Estado</td>
+                            <td>
+                               <center>@Html.ActionLink("Editar", "EditarPro", new { id = art.IdProducto }, new { @class = "btn btn-primary" })</center>
+                            </td>
+                            <td><center><input type="submit" value="Eliminar" class="btn btn-primary"/></center></td>
+                        </tr>}
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tab-pane" id="3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Nombre</b></td>
+                        <td><b>Imagen</b></td>
+                        <td><b>Precio</b></td>
+                        <td><b>Descripcion</b></td>
+                        <td><b>Estado</b></td>
+                        <td><b>Accion</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var planel in PlanElim)
+                    {
+                        using (Html.BeginForm("RegresarEstadoProducto", "Producto", FormMethod.Post))
+                        {
+                            <tr>
+                                <td hidden><input type="text" value="@planel.IdProducto" name="cod" /></td>
+                                <td>@planel.NombreProducto</td>
+                                <td><img class="img-responsive" src="@Url.Content(planel.ImagenProducto)" width="50" height="50" /></td>
+                                <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", planel.Precio)</td>
+                                <td>@planel.Descripcion</td>
+                                <td>@planel.Estado</td>
+                                <td><input type="submit" value="Actualizar" class="btn btn-primary" /><td>
+                            </tr>}
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tab-pane" id="4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Nombre</b></td>
+                        <td><b>Imagen</b></td>
+                        <td><b>Precio</b></td>
+                        <td><b>Descripcion</b></td>
+                        <td><b>Cantidad</b></td>
+                        <td><b>Estado</b></td>
+                        <td><b>Accion</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var artel in ArtElim)
+                    {
+                        using (Html.BeginForm("RegresarEstadoProducto", "Producto", FormMethod.Post))
+                        {
+                            <tr>
+                                <td hidden><input type="text" value="@artel.IdProducto" name="cod" /></td>
+                                <td>@artel.NombreProducto</td>
+                                <td><img class="img-responsive" src="@Url.Content(artel.ImagenProducto)" width="50" height="50" /></td>
+                                <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", artel.Precio)</td>
+                                <td>@artel.Descripcion</td>
+                                <td>@artel.CantidadProducto</td>
+                                <td>@artel.Estado</td>
+                                <td><input type="submit" value="Actualizar" class="btn btn-primary" /></td>
+                            </tr>}
+                    }
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
+
+}
+else
+{
+    Response.Redirect("~/Trabajador/LoginTrabajador");
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

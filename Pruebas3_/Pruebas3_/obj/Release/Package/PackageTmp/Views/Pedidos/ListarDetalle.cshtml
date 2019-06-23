@@ -1,0 +1,48 @@
+﻿@using System.Globalization
+
+@{
+    ViewBag.Title = "ListarDetalle";
+    var detalles = ViewBag.Detalles;
+}
+
+<h2>Detalles</h2>
+
+@if ((Session["IdTrabajador"] != null) || (Session["IdCliente"]!=null))
+{
+<table class="table">
+    <thead>
+        <tr>
+            <td><b>Producto</b></td>
+            <td><b>Precio</b></td>
+            <td><b>Cantidad</b></td>
+            <td><b>Total</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        @{ double total = 0; }
+        @foreach (var det in detalles)
+        {
+            total += (double)det.MontoTotal;
+            <tr>
+                <td>@det.NombreProducto</td>
+                <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", det.Precio)</td>
+                <td>@det.Cantidad</td>
+                <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", det.MontoTotal)</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3"><b>Monto Total</b></td>
+            <td>@String.Format(new CultureInfo("es-PE"), "{0:C}", total)</td>
+        </tr>
+    </tfoot>
+</table>
+            }
+            else
+            {
+                Response.Redirect("~/Trabajador/LoginTrabajador");
+            }
+
+
+

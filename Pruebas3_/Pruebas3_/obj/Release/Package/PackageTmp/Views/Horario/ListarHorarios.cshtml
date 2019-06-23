@@ -1,0 +1,243 @@
+﻿
+@{
+    ViewBag.Title = "Horarios";
+    var ListarLunes = ViewBag.ListarLunes;
+    var ListarMartes = ViewBag.ListarMartes;
+    var ListarMiercoles = ViewBag.ListarMiercoles;
+    var ListarJueves = ViewBag.ListarJueves;
+    var ListarViernes = ViewBag.ListarViernes;
+    var ListarSabado = ViewBag.ListarSabado;
+    var ListarDomingo = ViewBag.ListarDomingo;
+}
+
+<h2>Horarios</h2>
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+            <td>Jueves</td>
+            <td>Viernes</td>
+            <td>Sabado</td>
+            <td>Domingo</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8:00 am - 9:30 am</td>
+        </tr>
+        <tr>
+            <td>10:00 am - 11:30 am</td>
+        </tr>
+        <tr>
+            <td>12:00 pm - 1:30 am</td>
+        </tr>
+        <tr>
+            <td>2:00 pm - 3:30 pm</td>
+        </tr>
+        <tr>
+            <td>4:00 pm - 4:30 pm</td>
+        </tr>
+        <tr>
+            <td>5:00 pm - 5:30 pm</td>
+        </tr>
+        <tr>
+            <td>6:00 pm - 6:30 pm</td>
+        </tr>
+        <tr>
+            <td>7:00 pm - 7:30 pm</td>
+        </tr>
+        <tr>
+            <td>8:00 pm - 9:30 pm</td>
+        </tr>
+    </tbody>
+</table>*@
+
+@*<div class="container"><h2>Example tab 2 (using standard nav-tabs)</h2></div>*@
+
+<div id="exTab2" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab">Lunes</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab">Martes</a>
+        </li>
+        <li>
+            <a href="#3" data-toggle="tab">Miercoles</a>
+        </li>
+        <li>
+            <a href="#4" data-toggle="tab">Jueves</a>
+        </li>
+        <li>
+            <a href="#5" data-toggle="tab">Viernes</a>
+        </li>
+        <li>
+            <a href="#6" data-toggle="tab">Sabado</a>
+        </li>
+        <li>
+            <a href="#7" data-toggle="tab">Domingo</a>
+        </li>
+    </ul>
+
+    <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var lu in ListarLunes)
+            {
+                    <tr>
+                        <td>@lu.Hora</td>
+                        <td>@lu.Instructor</td>
+                        <td>@lu.NombreClase</td>
+                    </tr>
+            }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="2">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ma in ListarMartes)
+            {
+                        <tr>
+                            <td>@ma.Hora</td>
+                            <td>@ma.Instructor</td>
+                            <td>@ma.NombreClase</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="3">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var mi in ListarMiercoles)
+            {
+                        <tr>
+                            <td>@mi.Hora</td>
+                            <td>@mi.Instructor</td>
+                            <td>@mi.NombreClase</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ju in ListarJueves)
+            {
+                        <tr>
+                            <td>@ju.Hora</td>
+                            <td>@ju.Instructor</td>
+                            <td>@ju.NombreClase</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var vi in ListarViernes)
+            {
+                        <tr>
+                            <td>@vi.Hora</td>
+                            <td>@vi.Instructor</td>
+                            <td>@vi.NombreClase</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="6">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sa in ListarSabado)
+            {
+                        <tr>
+                            <td>@sa.Hora</td>
+                            <td>@sa.Instructor</td>
+                            <td>@sa.NombreClase</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="7">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td><b>Hora</b></td>
+                        <td><b>Instructor</b></td>
+                        <td><b>Clase</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dom in ListarDomingo)
+            {
+                        <tr>
+                            <td>@dom.Hora</td>
+                            <td>@dom.Instructor</td>
+                            <td>@dom.NombreClase</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+

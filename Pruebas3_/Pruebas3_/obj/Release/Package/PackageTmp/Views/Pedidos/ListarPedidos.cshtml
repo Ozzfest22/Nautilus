@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "ListarPedidos";
+    var SinCancelar = ViewBag.PedidosSinCancelar;
+    var Cancelados = ViewBag.PedidosCancelados;
+    var Eliminados = ViewBag.PedidosEliminados;
+}
+
+@if (Session["IdTrabajador"]!=null) {
+
+<h2>Pedidos</h2>
+
+<div id="exTab2" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab">Pedidos Recientes</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab">Pedidos Cancelados</a>
+        </li>
+        <li>
+            <a href="#3" data-toggle="tab">Pedidos Eliminados</a>
+        </li>
+    </ul>
+
+    <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Metodo Pago</b></td>
+                        <td><b>Fecha</b></td>
+                        <td><b>Estado</b></td>
+                        <td><b>Cliente</b></td>
+                        <td><b>Email</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sc in SinCancelar)
+                    {
+                        using (Html.BeginForm("ActualizarACancelado", "Pedidos", FormMethod.Post))
+                        {
+                            <tr>
+                                <td hidden><input type="text" value="@sc.IdPedidos" name="cod"/></td>
+                                <td>@sc.MetodoPago</td>
+                                <td>@string.Format("{0:yyyy-MM-dd}", sc.FechaRegistro)</td>
+                                <td>@sc.Estado</td>
+                                <td>@sc.Nombre</td>
+                                <td>@sc.Email</td>
+                                <td><input type="submit" value="Cancelar" class="btn btn-primary"/></td>
+                                <td><input type="submit" value="Eliminar" formaction="@Url.Action("ActualizarAEliminado", "Pedidos")" class="btn btn-primary"/></td>
+                                <td><input type="submit" value="Ver Detalle" formaction=@Url.Action("VerDetalle","Pedidos") class="btn btn-primary"/></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Metodo Pago</b></td>
+                        <td><b>Fecha</b></td>
+                        <td><b>Estado</b></td>
+                        <td><b>Cliente</b></td>
+                        <td><b>Email</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var can in Cancelados)
+                    {
+                        using (Html.BeginForm("ActualizarACancelado", "Pedidos", FormMethod.Post))
+                        {
+                            <tr>
+                                <td hidden><input type="text" value="@can.IdPedidos" name="cod" /></td>
+                                <td>@can.MetodoPago</td>
+                                <td>@string.Format("{0:yyyy-MM-dd}", can.FechaRegistro)</td>
+                                <td>@can.Estado</td>
+                                <td>@can.Nombre</td>
+                                <td>@can.Email</td>
+                                <td><input type="submit" value="Ver Detalle" formaction=@Url.Action("VerDetalle","Pedidos") class="btn btn-primary" /></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Metodo Pago</b></td>
+                        <td><b>Fecha</b></td>
+                        <td><b>Estado</b></td>
+                        <td><b>Cliente</b></td>
+                        <td><b>Email</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var eli in Eliminados)
+                    {
+                        using (Html.BeginForm("ActualizarACancelado", "Pedidos", FormMethod.Post))
+                        {
+                            <tr>
+                                <td hidden><input type="text" value="@eli.IdPedidos" name="cod" /></td>
+                                <td>@eli.MetodoPago</td>
+                                <td>@string.Format("{0:yyyy-MM-dd}", eli.FechaRegistro)</td>
+                                <td>@eli.Estado</td>
+                                <td>@eli.Nombre</td>
+                                <td>@eli.Email</td>
+                                <td><input type="submit" value="Ver Detalle" formaction=@Url.Action("VerDetalle","Pedidos") class="btn btn-primary" /></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
+
+}
+else
+{
+    Response.Redirect("~/Trabajador/LoginTrabajador");
+}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

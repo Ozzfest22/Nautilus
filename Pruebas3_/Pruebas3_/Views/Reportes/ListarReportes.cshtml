@@ -1,0 +1,191 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "ListarReportes";
+    var plsol = ViewBag.PlanesSolicitados;
+    var artven = ViewBag.ArtMasVendidos;
+    var cliped = ViewBag.CliMasPedidos;
+    var repfec = ViewBag.ReporteFecha;
+    var clainst = ViewBag.ClasesInstructor;
+    var susmes = ViewBag.SuscripcionesMes;
+
+}
+
+@if (Session["IdTrabajador"] != null)
+{
+
+<h2>Reportes</h2>
+
+<div id="exTab2" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab">Planes Mas Solicitados</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab">Suplementos Mas Vendidos</a>
+        </li>
+        <li>
+            <a href="#3" data-toggle="tab">Clientes con mas Pedidos</a>
+        </li>
+        <li>
+            <a href="#4" data-toggle="tab">Ventas por Dia</a>
+        </li>
+        <li>
+            <a href="#5" data-toggle="tab">Instructor con mas Clases</a>
+        </li>
+        <li>
+            <a href="#6" data-toggle="tab">Suscripciones del Mes</a>
+        </li>
+    </ul>
+
+    <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Plan</b></td>
+                        <td><b>Solicitudes hechas</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var plansol in plsol)
+                    {
+                       <tr>
+                            <td>@plansol.Planes</td>
+                            <td>@plansol.Cantidad</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Suplemento</b></td>
+                        <td><b>Veces comprado</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var arven in artven)
+                    {
+                        <tr>
+                            <td>@arven.NombreProducto</td>
+                            <td>@arven.Suplemento</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Cliente</b></td>
+                        <td><b>Cantidad Pedidos</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var peds in cliped)
+                    {
+                        <tr>
+                            <td>@peds.Nombre</td>
+                            <td>@peds.CantidadPedidos</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Suplemento</b></td>
+                        <td><b>Cantidad</b></td>
+                        <td><b>Precio</b></td>
+                        <td><b>Fecha</b></td>
+                        <td><b>Subtotal</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{double total = 0; }
+
+                    @foreach (var reps in repfec)
+                    {
+                        
+                        total += (double)reps.MontoTotal;
+                        <tr>
+                            <td>@reps.NombreProducto</td>
+                            <td>@reps.Cantidad</td>
+                            <td>@string.Format(new CultureInfo("es-PE"), "{0:C}",reps.Precio)</td>
+                            <td>@string.Format("{0:yyyy-MM-dd}",reps.FechaRegistro)</td>
+                            <td>@string.Format(new CultureInfo("es-PE"), "{0:C}",reps.MontoTotal)</td>
+                        </tr>
+                    }
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4">Total</th>
+                        <th>@String.Format(new CultureInfo("es-PE"), "{0:C}", total)</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="tab-pane" id="5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Instructor</b></td>
+                        <td><b>Cantidad de clases</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var clain in clainst)
+                    {
+                        <tr>
+                            <td>@clain.Instructor</td>
+                            <td>@clain.Cantidad</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Cliente</b></td>
+                        <td><b>Email</b></td>
+                        <td><b>Telefono</b></td>
+                        <td><b>Plan</b></td>
+                        <td><b>Fecha</b></td>
+                        <td><b>Estado</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sus in susmes)
+                    {
+                        <tr>
+                            <td>@sus.Nombre</td>
+                            <td>@sus.Email</td>
+                            <td>@sus.Telefono</td>
+                            <td>@sus.Planes</td>
+                            <td>@string.Format("{0:yyyy-MM-dd}", sus.FechaSuscripcion)</td>
+                            <td>@sus.Estado</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
+
+}
+else { Response.Redirect("~/Trabajador/LoginTrabajador"); }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
